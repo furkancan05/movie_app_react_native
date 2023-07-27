@@ -17,12 +17,5 @@ export default StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     color: colors.textLightColor
-  },
-  heart: {
-    width: 25,
-    height: 25,
-    position: "absolute",
-    bottom: 10,
-    right: 10
   }
 })
