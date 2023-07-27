@@ -1,51 +1,28 @@
 import { ScrollView } from "react-native"
 import Scrollable from "../../components/scrollable/Scrollable"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getNowPlaying, getPopular, getTopRated, getUpcoming } from "../../redux/slices/shorcaseSlice"
 
 export default function Showcase() {
-  const items = [
-    {
-      title: "Furkan",
-      isFavorite: true
-    },
-    {
-      title: "Furkan",
-      isFavorite: false
-    },
-    {
-      title: "Furkan",
-      isFavorite: false
-    },
-    {
-      title: "Furkan",
-      isFavorite: false
-    },
-    {
-      title: "Furkan",
-      isFavorite: true
-    },
-    {
-      title: "Furkan",
-      isFavorite: false
-    },
-    {
-      title: "Furkan",
-      isFavorite: false
-    },
-    {
-      title: "Furkan",
-      isFavorite: true
-    },
-    {
-      title: "Furkan",
-      isFavorite: false
-    }
-  ]
+
+  const dispatch = useDispatch()
+  const { value } = useSelector(state => state.showcase)
+
+  useEffect(() => {
+    dispatch(getNowPlaying())
+    dispatch(getPopular())
+    dispatch(getTopRated())
+    dispatch(getUpcoming())
+  }, [])
 
   return (
     <ScrollView>
-      <Scrollable items={items} title="Most Popular" />
-      <Scrollable items={items} title="Recent" />
-      <Scrollable items={items} title="New Orders" />
+      {
+        value.map((value, i) => {
+          return <Scrollable key={i} item={value} />
+        })
+      }
     </ScrollView>
   )
 }

@@ -1,9 +1,10 @@
 import { View, Text } from "react-native"
+import styles from "./moviedetail.style"
 
 export default function MovieDetail() {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text></Text>
+    <View style={StyleSheet.container}>
+      <Text>Detail Page</Text>
     </View>
   )
 }

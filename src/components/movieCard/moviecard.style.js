@@ -9,7 +9,6 @@ export default StyleSheet.create({
   },
   image: {
     flex: 1,
-    backgroundColor: "blue",
     borderRadius: 10,
     position: "relative"
   },
