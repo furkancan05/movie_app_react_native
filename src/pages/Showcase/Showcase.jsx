@@ -1,8 +1,8 @@
 import { ScrollView } from "react-native"
-import Scrollable from "../../components/scrollable/Scrollable"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getNowPlaying, getPopular, getTopRated, getUpcoming } from "../../redux/slices/showcaseSlice"
+import Scrollable from "../../components/scrollable/Scrollable"
 
 export default function Showcase() {
 

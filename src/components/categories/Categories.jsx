@@ -1,8 +1,8 @@
 import { ScrollView, Pressable, Text, ActivityIndicator, View } from "react-native"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import styles from "./categories.style"
 import { getCategories } from "../../redux/slices/categoriesSlice"
+import styles from "./categories.style"
 
 export default function Categories() {
 

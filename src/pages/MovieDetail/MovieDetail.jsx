@@ -11,7 +11,6 @@ export default function MovieDetail({ route }) {
   const { id } = route.params
   const [details, setDetails] = useState(null)
   const [isLoading, setisLoading] = useState(true)
-  const categories = useSelector(state => state.categories.value)
   const favorites = useSelector(state => state.favorites.value)
   const dispatch = useDispatch()
 
@@ -53,7 +52,15 @@ export default function MovieDetail({ route }) {
             <View style={styles.infoContainer}>
               <Text style={styles.title}>{details.title}</Text>
               <View style={styles.subtitlesContainer}>
-                <Text style={styles.subtitles}>asdasda / asdasd / asddsa</Text>
+                <Text style={styles.subtitles}>
+                  {
+                    details.genres.map((item, index) => {
+                      return (
+                        <Text key={index}>{item.name}{index !== details.genres.length - 1 ? <Text> / </Text> : null} </Text>
+                      )
+                    })
+                  }
+                </Text>
                 <Text style={[styles.subtitles, { flex: 1, textAlign: "right" }]}>{details.runtime} min.</Text>
               </View>
               <View style={styles.scoreContainer}>

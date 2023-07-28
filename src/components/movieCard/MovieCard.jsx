@@ -1,8 +1,7 @@
-import { View, Text, Image, ImageBackground, TouchableWithoutFeedback } from "react-native"
-import styles from "./moviecard.style"
-import icons from "../../styles/icons/icons"
+import { View, Text, ImageBackground, TouchableWithoutFeedback } from "react-native"
 import { imageURL } from "../../service/urls"
 import { useNavigation } from "@react-navigation/native"
+import styles from "./moviecard.style"
 
 export default function MovieCard({ item }) {
   return (

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
-import styles from "./searchbar.style"
+import { useState } from "react"
 import { TextInput, View, Image, TouchableOpacity } from "react-native"
+import styles from "./searchbar.style"
 import colors from "../../styles/colors"
 import icons from "../../styles/icons/icons"
 
