@@ -1,1 +1,0 @@
-export default apikey = "?api_key=008f5f813391f494def03a37c01c9252"
